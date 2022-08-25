@@ -32,28 +32,38 @@ body {
 #header #logo {
     background-color: azure;
     
-    margin: 5px
+    aspect-ratio: 1/1;
+    margin: 5px;
+    padding: auto;   
+    
+    display: flex;
+}
+
+#header #logo pre {
+    margin: auto;
+    font-size: 1vw;
+    line-height: 1.2vw;
+    
 }
 
 #header #title {
     background-color: azure;
     margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header #title pre {
+    font-size: 10px;
+    margin-bottom: 10px;
 }
 
 #main {
     grid-area: main;
     padding: 5px;
-
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(3, minmax(220px, 1fr));
-    overflow: auto;
     
     background-color: lightgoldenrodyellow;
 }
 
-#main .article {
-    padding: 5px;
-
-    background-color: azure;
-}
