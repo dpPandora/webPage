@@ -2,42 +2,58 @@ body {
     margin: 0;
     padding: 0;
 
-    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: grid;
+    grid-template-columns: [sideBar-start] 15vw [sideBar-end mainContent-start] 85vw [mainContent-end];
+    grid-template-rows: [headerLogo-start] 15vw [headerLogo-end page-start] 100vh [page-end];
+    grid-template-areas: 
+        "header header"
+        "sideBar main";
 }
 
-#sideBar {
-    position: sticky;
-    top: 0;
-    margin: 0;
-    width: 20vw;
-    height: 100vh;
+#side {
+    grid-area: sideBar;
 
-    border: 1px red solid;
-}
-
-#mainContent {
-    margin: 0;
-    width: 100%;
-    height: 1000px;
-
-
-    border: 1px red solid;
-}
-
-#logo {
-    margin: 0;
-    width: 100%;
-    aspect-ratio: 1/1;
-
-
-    border: 1px blue solid;
+    background-color: lightcoral;
 }
 
 #header {
-    margin: 0;
-    width: 100%;
-    height: 20vw;
-    overflow: hidden;
+    grid-area: header;
 
-    border: 1px blue solid;
+    display: grid;
+    grid-template-columns: 15vw 85vw;
+    grid-template-areas: 
+        "logo title";
+
+    background-color: lightblue;
+}
+
+#header #logo {
+    background-color: azure;
+    
+    margin: 5px
+}
+
+#header #title {
+    background-color: azure;
+    margin: 5px;
+}
+
+#main {
+    grid-area: main;
+    padding: 5px;
+
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    overflow: auto;
+    
+    background-color: lightgoldenrodyellow;
+}
+
+#main .article {
+    padding: 5px;
+
+    background-color: azure;
 }
