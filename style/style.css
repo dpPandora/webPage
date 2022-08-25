@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+#sideBar {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    width: 20vw;
+    height: 100vh;
+
+    border: 1px red solid;
+}
+
+#mainContent {
+    margin: 0;
+    width: 100%;
+    height: 1000px;
+
+
+    border: 1px red solid;
+}
+
+#logo {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 1/1;
+
+
+    border: 1px blue solid;
+}
+
+#header {
+    margin: 0;
+    width: 100%;
+    height: 20vw;
+    overflow: hidden;
+
+    border: 1px blue solid;
+}
